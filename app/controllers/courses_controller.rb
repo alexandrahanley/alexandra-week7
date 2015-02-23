@@ -43,7 +43,7 @@ end
 private
 
 def course_params
-  params.require(:course).permit(:title, :day_class, :night_class)
+  params.require(:course).permit(:title, :day_class)
 end
 
 end
