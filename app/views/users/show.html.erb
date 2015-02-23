@@ -1,0 +1,19 @@
+<table border= "1">
+  <thead>
+  <tr>
+    <th> Username </th>
+    <th> About </th>
+  </thead>
+  </tr>
+
+  <tbody>
+      <tr>
+    <td><%= @user.user_name %></td>
+    <td><%= @user.about %></td>
+ </tr>
+</tbody>
+
+</table>
+
+<%= link_to 'Edit User', edit_user_path %>
+<%= link_to 'See all Users', users_path %>

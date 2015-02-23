@@ -1,4 +1,4 @@
-<h1>Courses</h1>
+<h1>All Courses</h1>
 <table border= "1">
   <thead>
   <tr>
@@ -11,7 +11,7 @@
   <tbody>
       <% @courses.each do |course| %>
       <tr>
-    <td><%= link_to course.title, @course %></td>
+    <td><%= link_to course.title, course_path(course) %></td>
     <td><%= course.day_class %></td>
     <td><%= course.night_class %></td>
     <td><%= link_to 'Delete Course', course, method: :delete %></td>
@@ -21,3 +21,4 @@
 </table>
 
 <%= link_to 'Create Course', new_course_path %>
+<%= link_to 'See All Users', users_path %>

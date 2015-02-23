@@ -1,0 +1,21 @@
+<h1>All Users</h1>
+<table border= "1">
+  <thead>
+  <tr>
+    <th> User </th>
+    <th> About</th>
+  </thead>
+  </tr>
+
+  <tbody>
+      <% @users.each do |user| %>
+      <tr>
+    <td><%= link_to user.user_name, user_path(user) %></td>
+    <td><%= user.about %></td>
+    <td><%= link_to 'Delete User', user, method: :delete %></td>
+ </tr>
+</tbody>
+<% end %>
+</table>
+
+<%= link_to 'Create User', new_user_path %>
